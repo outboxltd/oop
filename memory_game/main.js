@@ -1,46 +1,34 @@
-$("img").attr("src","https://i.ibb.co/3py9Qj2/a.jpg");
-
 
 $(document).ready(function () {
-    $("#card1").click(function () {
+    $("img").attr("src", "https://i.ibb.co/3py9Qj2/a.jpg");
+
+
+    $(".card1").click(function () {
         $("#card_over1").css("visibility", "hidden");
     });
 
-    $("#card2").click(function () {
+    $(".card2").click(function () {
         $("#card_over2").css("visibility", "hidden");
     });
-});
 
-
-
-$(document).ready(function () {
-    $("#card3").click(function () {
+    $(".card3").click(function () {
         $("#card_over3").css("visibility", "hidden");
-
     });
-});
 
-$(document).ready(function () {
-    $("#card4").click(function () {
+    $(".card4").click(function () {
         $("#card_over4").css("visibility", "hidden");
-
     });
-});
 
-$(document).ready(function () {
-    $("#card5").click(function () {
+    $(".card5").click(function () {
         $("#card_over5").css("visibility", "hidden");
-
     });
-});
 
-$(document).ready(function () {
-    $("#card6").click(function () {
+    $(".card6").click(function () {
         $("#card_over6").css("visibility", "hidden");
-        // alert($($(this)).attr("id"))
-
     });
 });
+
+
 
 
 $("#random").click(function () {
@@ -60,13 +48,18 @@ $("#random").click(function () {
 
 var compir = [];
 var n = -1;
+
 function gettheid(x) {
-    n++
-    // compir.push =($($(x)).attr("id"));
-    compir[n] = $($(x)).attr("id");
-    
+    if (compir.length < 2) {
+        n++
+        compir[n] = $($(x)).attr("id");
+        if (compir[0] == compir[1]) {
+            alert('good memory')      
+        } else {
+            $("#card_over1").css("visibility", "visible");
+        }
+    }
+
     console.log(n);
     console.log(compir);
-    
-
-}
+} // gettheid
