@@ -1,16 +1,17 @@
+$("img").attr("src","https://i.ibb.co/3py9Qj2/a.jpg");
+
+
 $(document).ready(function () {
     $("#card1").click(function () {
         $("#card_over1").css("visibility", "hidden");
-
     });
-});
 
-$(document).ready(function () {
     $("#card2").click(function () {
         $("#card_over2").css("visibility", "hidden");
-
     });
 });
+
+
 
 $(document).ready(function () {
     $("#card3").click(function () {
@@ -36,6 +37,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#card6").click(function () {
         $("#card_over6").css("visibility", "hidden");
+        // alert($($(this)).attr("id"))
 
     });
 });
@@ -55,3 +57,16 @@ $("#random").click(function () {
     $(".card_main_5").addClass("order-" + rando5);
     $(".card_main_6").addClass("order-" + rando6);
 });
+
+var compir = [];
+var n = -1;
+function gettheid(x) {
+    n++
+    // compir.push =($($(x)).attr("id"));
+    compir[n] = $($(x)).attr("id");
+    
+    console.log(n);
+    console.log(compir);
+    
+
+}
