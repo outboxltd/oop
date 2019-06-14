@@ -3,8 +3,8 @@
 }
 
 #card1 {
-    background-image: url('https://i.ibb.co/cJ0yfdZ/bg1.jpg')
-}
+    background-image: url('https://i.ibb.co/cJ0yfdZ/bg1.jpg');
+    }
 
 #card2 {
     background-image: url('https://i.ibb.co/5rQq4Qh/bg2.jpg')
@@ -37,3 +37,4 @@
    padding: 0 !important;
    margin: 0 !important;
 }
+

@@ -1,10 +1,14 @@
+function hideagine() {
+    $("#card_over1").css("visibility", "visible");
+} 
+
 
 $(document).ready(function () {
     $("img").attr("src", "https://i.ibb.co/3py9Qj2/a.jpg");
 
-
     $(".card1").click(function () {
-        $("#card_over1").css("visibility", "hidden");
+        $("#card_over1").css("visibility", "hidden"); // not visible
+        setTimeout(hideagine, 2000);
     });
 
     $(".card2").click(function () {
