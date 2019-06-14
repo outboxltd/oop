@@ -1,41 +1,53 @@
 function hideagine() {
-    $("#card_over1").css("visibility", "visible");
+    $(".card1 > img").css("visibility", "visible");
+    $(".card2 > img").css("visibility", "visible");
+    $(".card3 > img").css("visibility", "visible");
+    $(".card4 > img").css("visibility", "visible");
+    $(".card5 > img").css("visibility", "visible");
+    $(".card6 > img").css("visibility", "visible");
 } 
 
+
+var timeout = 4000;
 
 $(document).ready(function () {
     $("img").attr("src", "https://i.ibb.co/3py9Qj2/a.jpg");
 
     $(".card1").click(function () {
-        $("#card_over1").css("visibility", "hidden"); // not visible
-        setTimeout(hideagine, 2000);
+        $("#card_over1").css("visibility", "hidden"); 
+        setTimeout(hideagine, timeout);
     });
 
     $(".card2").click(function () {
-        $("#card_over2").css("visibility", "hidden");
+        $(".card2 > img").css("visibility", "hidden");
+        setTimeout(hideagine, timeout);
     });
 
     $(".card3").click(function () {
-        $("#card_over3").css("visibility", "hidden");
+        $(".card3 > img").css("visibility", "hidden");
+        setTimeout(hideagine, timeout);
     });
 
     $(".card4").click(function () {
-        $("#card_over4").css("visibility", "hidden");
+        $(".card4 > img").css("visibility", "hidden");
+        setTimeout(hideagine, timeout);
     });
 
     $(".card5").click(function () {
-        $("#card_over5").css("visibility", "hidden");
+        $(".card5 > img").css("visibility", "hidden");
+        setTimeout(hideagine, timeout);
     });
 
     $(".card6").click(function () {
-        $("#card_over6").css("visibility", "hidden");
+        $(".card6 > img").css("visibility", "hidden");
+        setTimeout(hideagine, timeout);
     });
 });
 
 
 
 
-$("#random").click(function () {
+$("#random").click(function() {
     let rando1 = Math.floor(Math.random() * 6);
     let rando2 = Math.floor(Math.random() * 6);
     let rando3 = Math.floor(Math.random() * 6);
@@ -60,7 +72,9 @@ function gettheid(x) {
         if (compir[0] == compir[1]) {
             alert('good memory')      
         } else {
-            $("#card_over1").css("visibility", "visible");
+            // $("#card_over1").css("visibility", "visible");
+           
+
         }
     }
 
