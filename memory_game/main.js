@@ -1,3 +1,19 @@
+class Card {
+    constructor(id,name, image,visibility) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.visibility = visibility;
+    }
+    sayhello() {
+        alert("hi " + this.name)
+    }
+}
+
+
+let dog = new Card("card7","laki","https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg","visible")
+
+
 function hideagine() {
     $(".card1 > img").css("visibility", "visible");
     $(".card2 > img").css("visibility", "visible");
@@ -11,6 +27,7 @@ function hideagine() {
 var timeout = 4000;
 
 $(document).ready(function () {
+
     $("img").attr("src", "https://i.ibb.co/3py9Qj2/a.jpg");
 
     $(".card1").click(function () {
