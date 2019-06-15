@@ -1,70 +1,26 @@
-class Card {
-    constructor(id,name, image,visibility) {
-        this.id = id;
-        this.name = name;
-        this.image = image;
-        this.visibility = visibility;
-    }
-    sayhello() {
-        alert("hi " + this.name)
-    }
-}
 
-
-let dog = new Card("card7","laki","https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg","visible")
-
-
-function hideagine() {
-    $(".card1 > img").css("visibility", "visible");
-    $(".card2 > img").css("visibility", "visible");
-    $(".card3 > img").css("visibility", "visible");
-    $(".card4 > img").css("visibility", "visible");
-    $(".card5 > img").css("visibility", "visible");
-    $(".card6 > img").css("visibility", "visible");
-} 
-
-
-var timeout = 4000;
 
 $(document).ready(function () {
-
     $("img").attr("src", "https://i.ibb.co/3py9Qj2/a.jpg");
+    $('#card1').css('background-image', 'url(' + dog.image + ')');
+    $('#card2').css('background-image', 'url(' + rabbit.image + ')');
+    $('#card3').css('background-image', 'url(' + scaryshit.image + ')');
+    $('.card4').css('background-image', 'url(' + dog.image + ')');
+    $('.card5').css('background-image', 'url(' + rabbit.image + ')');
+    $('.card6').css('background-image', 'url(' + scaryshit.image + ')');
 
-    $(".card1").click(function () {
-        $("#card_over1").css("visibility", "hidden"); 
-        setTimeout(hideagine, timeout);
-    });
+        
 
-    $(".card2").click(function () {
-        $(".card2 > img").css("visibility", "hidden");
-        setTimeout(hideagine, timeout);
-    });
+    // $("#over_card1").click(function () {
+    //     $(this).css("visibility", "hidden");
+    //  });
 
-    $(".card3").click(function () {
-        $(".card3 > img").css("visibility", "hidden");
-        setTimeout(hideagine, timeout);
-    });
-
-    $(".card4").click(function () {
-        $(".card4 > img").css("visibility", "hidden");
-        setTimeout(hideagine, timeout);
-    });
-
-    $(".card5").click(function () {
-        $(".card5 > img").css("visibility", "hidden");
-        setTimeout(hideagine, timeout);
-    });
-
-    $(".card6").click(function () {
-        $(".card6 > img").css("visibility", "hidden");
-        setTimeout(hideagine, timeout);
-    });
 });
 
 
 
 
-$("#random").click(function() {
+$("#random").click(function () {
     let rando1 = Math.floor(Math.random() * 6);
     let rando2 = Math.floor(Math.random() * 6);
     let rando3 = Math.floor(Math.random() * 6);
@@ -87,14 +43,24 @@ function gettheid(x) {
         n++
         compir[n] = $($(x)).attr("id");
         if (compir[0] == compir[1]) {
-            alert('good memory')      
+            alert('good memory')
         } else {
-            // $("#card_over1").css("visibility", "visible");
-           
+
 
         }
     }
 
-    console.log(n);
     console.log(compir);
 } // gettheid
+
+
+
+$("body").click(function (event) {
+    let click_id = event.target.id;
+     document.getElementById(click_id).style.visibility = "hidden";
+
+     console.log("the id is " + click_id)
+
+     
+});
+

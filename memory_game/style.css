@@ -2,32 +2,6 @@
     position: relative;
 }
 
-#card1 {
-    background-image: url('https://i.ibb.co/cJ0yfdZ/bg1.jpg');
-    }
-
-#card2 {
-    background-image: url('https://i.ibb.co/5rQq4Qh/bg2.jpg')
-}
-
-#card3 {
-    background-image: url('https://i.ibb.co/TBRKpmX/bg3.jpg')
-}
-
-#card4 {
-    background-image: url('https://i.ibb.co/cJ0yfdZ/bg1.jpg')
-}
-
-#card5 {
-    background-image: url('https://i.ibb.co/5rQq4Qh/bg2.jpg')
-}
-
-#card6 {
-    background-image: url('https://i.ibb.co/TBRKpmX/bg3.jpg')
-}
-
-
-
 
 .blue {
     background-color: aqua;
@@ -38,3 +12,6 @@
    margin: 0 !important;
 }
 
+.hidestaff {
+    visibility: hidden;
+}
