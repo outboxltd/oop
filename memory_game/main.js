@@ -1,4 +1,18 @@
+$("body").click(function (event) {
+    let click_id = event.target.id;
+     document.getElementById(click_id).style.visibility = "hidden";
 
+     console.log("the id is " + click_id)
+     setTimeout(function(){
+        hide_again(click_id);
+      }, 1000);
+     
+});
+
+function hide_again(click_id) {
+    document.getElementById(click_id).style.visibility = "visible";
+
+}
 
 $(document).ready(function () {
     $("img").attr("src", "https://i.ibb.co/3py9Qj2/a.jpg");
@@ -54,13 +68,4 @@ function gettheid(x) {
 } // gettheid
 
 
-
-$("body").click(function (event) {
-    let click_id = event.target.id;
-     document.getElementById(click_id).style.visibility = "hidden";
-
-     console.log("the id is " + click_id)
-
-     
-});
 
