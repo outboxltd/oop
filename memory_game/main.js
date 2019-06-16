@@ -5,15 +5,19 @@ $(".container").click(function (event) {
      setTimeout(function(){
         hide_again(click_id);
       }, 2000);
+      
       console.log("the id from eventlistener is : " + click_id);
 });
+
+
+
 
 function hide_again(click_id) {
     document.getElementById(click_id).style.visibility = "visible";
 }
 
 $(document).ready(function () {
-    $("img").attr("src", "https://i.ibb.co/3py9Qj2/a.jpg");
+    $("img").attr("src", "https://bit.ly/2wYsoJQ");
     $('#card1').css('background-image', 'url(' + dog.image + ')');
     $('#card2').css('background-image', 'url(' + rabbit.image + ')');
     $('#card3').css('background-image', 'url(' + scaryshit.image + ')');
@@ -55,19 +59,35 @@ function gettheid(x) {
         let make_it_over = ("over_" + the_id)
  
         if (compir[0] == compir[1]) {
-            alert("good memo ")
-            // document.getElementById("over_" +compir[0]).style.visibility = "hidden";
-            // document.getElementById("over_" +compir[1]).style.visibility = "hidden";
-            document.getElementById(make_it_over).style.visibility = "hidden";
+            console.log("good memo ")
+           
+            setTimeout(function(){
+                keep_show1("over_" +compir[0]);
+              }, 3000);
 
-            alert("over_" +compir[0])
-            // over_card1.style.visibility = "hidden"
+              setTimeout(function(){
+                keep_show2("over_" +compir[1]);
+              }, 3000);
+              
+
+            console.log("over_" +compir[0])
+            console.log("over_" +compir[1])
+
         } else {
             // compir.pop();
         } 
     } 
 
     console.log(compir);
+
+    function keep_show1(click_id) {
+        document.getElementById(click_id).style.visibility = "hidden";
+    }
+
+    function keep_show2(click_id) {
+        document.getElementById(click_id).style.visibility = "hidden";
+    }
+
 } 
 
 
