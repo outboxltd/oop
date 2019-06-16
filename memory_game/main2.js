@@ -1,15 +1,17 @@
-$(".container").click(function (event) {
+$("body").click(function (event) {
     let click_id = event.target.id;
      document.getElementById(click_id).style.visibility = "hidden";
 
+     console.log("the id is " + click_id)
      setTimeout(function(){
         hide_again(click_id);
-      }, 2000);
-      console.log("the id from eventlistener is : " + click_id);
+      }, 1000);
+     
 });
 
 function hide_again(click_id) {
     document.getElementById(click_id).style.visibility = "visible";
+
 }
 
 $(document).ready(function () {
@@ -21,7 +23,15 @@ $(document).ready(function () {
     $('.card5').css('background-image', 'url(' + rabbit.image + ')');
     $('.card6').css('background-image', 'url(' + scaryshit.image + ')');
 
+        
+
+    // $("#over_card1").click(function () {
+    //     $(this).css("visibility", "hidden");
+    //  });
+
 });
+
+
 
 
 $("#random").click(function () {
@@ -43,32 +53,16 @@ var compir = [];
 var n = -1;
 
 function gettheid(x) {
-    console.log($($(x)).attr("id"));
-}
-
-
-function gettheid(x) {
     if (compir.length < 2) {
         n++
-        let the_id = $($(x)).attr("id");
-        compir[n] = the_id;
-        let make_it_over = ("over_" + the_id)
- 
+        compir[n] = $($(x)).attr("id");
         if (compir[0] == compir[1]) {
-            alert("good memo ")
-            // document.getElementById("over_" +compir[0]).style.visibility = "hidden";
-            // document.getElementById("over_" +compir[1]).style.visibility = "hidden";
-            document.getElementById(make_it_over).style.visibility = "hidden";
-
-            alert("over_" +compir[0])
-            // over_card1.style.visibility = "hidden"
+            alert('good memory')
         } else {
-            // compir.pop();
-        } 
-    } 
+
+
+        }
+    }
 
     console.log(compir);
-} 
-
-
-
+} // gettheid
