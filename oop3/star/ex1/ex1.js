@@ -6,9 +6,9 @@ class Student {
 }
 
 class Programmer extends Student {
-    constructor(name, courses, operating_system, languages, vcs) {
+    constructor(name, courses, operatingSystem, languages, vcs) {
         super(name, courses);
-        this.operating_system = operating_system;
+        this.operatingSystem = operatingSystem;
         this.languages = languages;
         this.vcs = vcs;
     }
@@ -29,14 +29,14 @@ let tomer = new Programmer("tomer", "itc", "windows", "javascript", "github");
 let uri = new Programmer("uri", "itc", "windows", "java", "github");
 
 
-let all_students = [gilad,tomer,uri];
+let allStudents = [gilad,tomer,uri];
 
 function thefirst2knowjs() {
-    for (let i = 0; i < all_students.length; i++) {
-        if (all_students[i].languages === "javascript") 
-            return all_students[i].name;     
+    for (let i = 0; i < allStudents.length; i++) {
+        if (allStudents[i].languages === "javascript") 
+            return allStudents[i].name;     
     }
 }
 
-// thefirst2knowjs(all_students)
+// thefirst2knowjs(allStudents)
 
